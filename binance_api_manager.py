@@ -109,7 +109,7 @@ class BinanceAPIManager:
             except Exception as e:
                 self.logger.info("Unexpected Error: {0}".format(e))
 
-        trade_log.set_ordered(origin_symbol, target_symbol, order_quantity)
+        trade_log.set_ordered(origin_balance, target_balance, order_quantity)
 
         # It could take a while for Binance server to save the order
         order_recorded = False
